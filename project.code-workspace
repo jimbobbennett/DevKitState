@@ -11,6 +11,7 @@
         }
     ],
     "settings": {
+        "IoTWorkbench.BoardId": "devkit",
         "IoTWorkbench.DevicePath": "Device",
         "IoTWorkbench.FunctionPath": "Functions"
     }
