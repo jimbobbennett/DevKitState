@@ -18,7 +18,7 @@ namespace DevKit
         static readonly string connectionString = Environment.GetEnvironmentVariable("iotHubConnectionString");
         static readonly RegistryManager registryManager = RegistryManager.CreateFromConnectionString(connectionString);
 
-        static readonly string deviceName = "jimsdevice";
+        static readonly string deviceName = "";
 
         [FunctionName("devkit-state")]
         public static async Task<IActionResult> Run(
