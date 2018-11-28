@@ -52,12 +52,12 @@ function getTwin() {
         return data.json();
     }).then(function (data){
         scope.loading = false;
-        scope.reportedTwin = data.Reported;
-        scope.userLEDState = data.Desired.userLEDState || 0;
-        scope.rgbLEDState = data.Desired.rgbLEDState || 0;
-        scope.rgbColor.r = data.Desired.rgbLEDR || 0;
-        scope.rgbColor.g = data.Desired.rgbLEDG || 0;
-        scope.rgbColor.b = data.Desired.rgbLEDB || 0;
+        scope.reportedTwin = data.reported;
+        scope.userLEDState = data.desired.userLEDState || 0;
+        scope.rgbLEDState = data.desired.rgbLEDState || 0;
+        scope.rgbColor.r = data.desired.rgbLEDR || 0;
+        scope.rgbColor.g = data.desired.rgbLEDG || 0;
+        scope.rgbColor.b = data.desired.rgbLEDB || 0;
         scope.lastUpdated = new Date(scope.reportedTwin.$metadata.$lastUpdated).toLocaleString('en-GB', {hour12: false}).replace(',', '');
     });
 }
